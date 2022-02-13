@@ -7,6 +7,7 @@ namespace HTMLCreation.HtmlMaker{
 
     class HtmlMakerProgram{
         
+
        public static void CreateHtml(){
            
 
@@ -35,6 +36,13 @@ namespace HTMLCreation.HtmlMaker{
             // Console.Write(htmlString);
        }
 
-        
+        // a method for creating each seperate tag passed in as an argument
+        public void createSeperateTag(KeyValuePair<string, object> tag){
+            
+            Console.WriteLine($"<{tag.Key}>");
+                Console.WriteLine($"{tag.Value}");
+            Console.WriteLine($"</{tag.Key}>");
+
+        }
     }
 }
