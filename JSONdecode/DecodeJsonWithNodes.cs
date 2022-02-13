@@ -11,9 +11,9 @@ namespace AssignmentCSJSON.JSONdecode
     {
         public string JsonFile {get;set;}
 
-        public string[] headTags = {"head", "title", "style", "script"};
+        public string[] headTags = {"text", "head", "title", "style", "script"};
         public string[] headTagsSingleton = {"meta", "link", "base"};
-        public string[] bodyTags = {"body", "a", "abbr", "address", "article", "aside", "audio", "b", "bdo", "blockquote", "button", 
+        public string[] bodyTags = { "text", "body", "a", "abbr", "address", "article", "aside", "audio", "b", "bdo", "blockquote", "button", 
                                     "canvas", "caption", "cite", "code", "colgroup", 
                                     "datalist", "dd", "del", "details", "dfn", "div", "dl", "dt", "em", 
                                     "fieldset", "figcaption", "figure", "footer", "form", "frame", "frameset",
@@ -132,10 +132,31 @@ namespace AssignmentCSJSON.JSONdecode
                     }else if(item.Value.GetType() == typeof(JsonArray)){
                         foreach (var arrayItem in item.Value.AsArray())
                         {
-                            Console.Write($"<{item.Key}");   
-                            Console.Write(">");
-                            Console.Write($"{arrayItem}");   
-                            Console.WriteLine($"</{item.Key}>");   
+                            Console.Write($"<{item.Key}");  
+                            if(arrayItem.GetType()==typeof(JsonObject)){
+
+                                foreach (var arrayObjectItem in arrayItem.AsObject())
+                                {
+                                        if(arrayObjectItem.Key.ToString() == "attributes"){
+                                       
+                                            DoHtmlAttributes(arrayObjectItem.Value);
+                                        }
+
+                                    // foreach (var arrayObjectInnerItem in arrayObjectItem.Value.AsObject())
+                                    // {
+                                    // }
+
+                                            
+                                }
+                                Console.WriteLine(">");
+                                DoHtmlThing(arrayItem.AsObject(), amountOfTabs++);                            
+                                Console.WriteLine($"</{item.Key}>");   
+                            }else{
+                               //Console.Write($"<{item.Key}");   
+                                Console.Write(">");
+                                Console.Write($"{arrayItem}");   
+                                Console.WriteLine($"</{item.Key}>");   
+                            }
                         }
                         
                     }else{
@@ -165,7 +186,6 @@ namespace AssignmentCSJSON.JSONdecode
                         Console.Write($"<{item.Key}");
                         DoHtmlAttributes(item.Value);
                         Console.WriteLine($">");
-
                     }
                 }
             }
