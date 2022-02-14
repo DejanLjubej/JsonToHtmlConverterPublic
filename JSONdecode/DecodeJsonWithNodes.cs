@@ -25,42 +25,45 @@ namespace AssignmentCSJSON.JSONdecode
                                     "u", "ul", "var", "video"};
         public string[] bodyTagsSingleton = {"area", "br", "col", "command", "embed", "hr", "img", "input", 
                                             "keygen", "link", "meta", "param", "source", "track", "wbr"};
+        private string[] singletonTags = {"area", "br", "col", "command", "embed", "hr", "img", "input", 
+                                            "keygen", "link", "meta", "param", "source", "track", "wbr",
+                                            "meta", "link", "base"};
         public DecodeJsonWithNodes(string jsonFile){
             JsonFile = jsonFile;
         }
-
-        public List<Dictionary<string, object>> listOfTags =  new List<Dictionary<string, object>>();
-        public List<JsonNode> listOfJNTags = new List<JsonNode>();
+        JsonNode? fullJsonFile;
+        pageNotFoundJson htmlMainTags = new pageNotFoundJson();
         public void Main(){
             
             string jsonString = File.ReadAllText(JsonFile);
 
-            JsonNode? fullJsonFile = JsonNode.Parse(jsonString);
-
-            pageNotFoundJson.Doctype = fullJsonFile["doctype"];
-            // Console.WriteLine($"Doctype Section = {pageNotFoundJson.Doctype}");
-
-            pageNotFoundJson.Head = fullJsonFile["head"];
-            // Console.WriteLine($"Head Section = {pageNotFoundJson.Head}");
-            
-            pageNotFoundJson.Body = fullJsonFile["body"];
-            // Console.WriteLine($"Body Section = {pageNotFoundJson.Body}");
+            fullJsonFile = JsonNode.Parse(jsonString);
+            htmlMainTags.Doctype = fullJsonFile["doctype"];
+            htmlMainTags.Language = fullJsonFile["language"];
+           
             Console.WriteLine($"full file Section = {fullJsonFile}");
-            DoHtmlThing(fullJsonFile);
-
-
+            HtmlBaseWrite();
         }
 
+        private void HtmlBaseWrite(){
+            Console.WriteLine($"<!doctype {htmlMainTags.Doctype}>");
+            Console.WriteLine($"<html lang = {htmlMainTags.Language}>");
+            DoHtmlThing(fullJsonFile);
+            Console.Write("</html>");
+        }
 
-        public void DoHtmlThing(JsonNode aThing, int amountOfTabs=1){
+        public void DoHtmlThing(JsonNode aThing, int amountOfTabs=0){
 
             foreach (var item in aThing.AsObject())
             {
-                if( ( bodyTagsSingleton.Contains(item.Key.ToString()) ) || 
-                    ( headTagsSingleton.Contains(item.Key.ToString()) ) && 
+                int indenting = amountOfTabs;
+                for (int i = 0; i < indenting; i++)
+                {
+                    Console.Write("  ");
+                }
+                if( ( singletonTags.Contains(item.Key.ToString())) && 
                     (item.Key.ToString() != "doctype")){
 
-                    Console.Write("   ");
                     HandleSingletonTags(item);
                    
                 }else if(
@@ -68,7 +71,6 @@ namespace AssignmentCSJSON.JSONdecode
                     (item.Key.ToString() != "doctype") && 
                     (item.Key.ToString() != "language")){
 
-                    Console.Write("   ");
                     HandleRegularTags(item);
                  
                 }
@@ -82,11 +84,12 @@ namespace AssignmentCSJSON.JSONdecode
 
         private void CloseOpeningTag(string itemKey){
             if(itemKey != "text")
-                    Console.WriteLine(">");
+                Console.WriteLine(">");
         }
         private void WriteClosingTag(string itemKey){
+            Console.WriteLine();
             if(itemKey != "text")
-                Console.Write($"</{itemKey}>");   
+                Console.WriteLine($"</{itemKey}>");   
         }
 
         private void HandleRegularTags(KeyValuePair<string, JsonNode?> item){
@@ -159,7 +162,6 @@ namespace AssignmentCSJSON.JSONdecode
                         WriteOpeningTag(item.Key); 
 
                         DoHtmlAttributes(arrayItem);
-
                         CloseOpeningTag(item.Key);
                     }else{
 
@@ -214,10 +216,9 @@ namespace AssignmentCSJSON.JSONdecode
         }
     }
 
-    public static class pageNotFoundJson{
+    public class pageNotFoundJson{
 
-        public static JsonNode? Doctype {get; set;}
-        public static JsonNode? Head {get; set;}
-        public static JsonNode? Body {get; set;}
+        public JsonNode? Doctype {get; set;}
+        public JsonNode? Language {get;set;}
     }
 }
