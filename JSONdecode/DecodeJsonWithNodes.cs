@@ -54,125 +54,136 @@ namespace AssignmentCSJSON.JSONdecode
 
         public void DoHtmlThing(JsonNode aThing, int amountOfTabs=1){
 
-            for (var i = 0; i < amountOfTabs; i++)
-            {
-                Console.Write("   ");
-            }
-
             foreach (var item in aThing.AsObject())
             {
-                 if( ( bodyTags.Contains(item.Key.ToString()) ) || ( headTags.Contains(item.Key.ToString()) ) ){
+                if( ( bodyTagsSingleton.Contains(item.Key.ToString()) ) || 
+                    ( headTagsSingleton.Contains(item.Key.ToString()) ) && 
+                    (item.Key.ToString() != "doctype")){
+
+                    Console.Write("   ");
+                    HandleSingletonTags(item);
+                   
+                }else if(
+                    (item.Key.ToString() != "attributes") && 
+                    (item.Key.ToString() != "doctype") && 
+                    (item.Key.ToString() != "language")){
+
+                    Console.Write("   ");
+                    HandleRegularTags(item);
+                 
+                }
+            }
+        }
+
+        private void WriteOpeningTag(string itemKey){
+            if(itemKey != "text")
+                Console.Write($"<{itemKey}");   
+        }
+
+        private void CloseOpeningTag(string itemKey){
+            if(itemKey != "text")
+                    Console.WriteLine(">");
+        }
+        private void WriteClosingTag(string itemKey){
+            if(itemKey != "text")
+                Console.Write($"</{itemKey}>");   
+        }
+
+        private void HandleRegularTags(KeyValuePair<string, JsonNode?> item){
+            if(item.Value.GetType() == typeof(JsonObject)){
+
+                WriteOpeningTag(item.Key);
                     
-                    if(item.Value.GetType() == typeof(JsonObject)){
-
-                        if(item.Key.ToString() != "text")
-                            Console.Write($"<{item.Key}");   
-                            
-                        foreach (var innerItem in item.Value.AsObject())
-                        {
-                            if(innerItem.Key.ToString() == "attributes"){
-                                DoHtmlAttributes(innerItem.Value);
-                            }
-                        }
-
-                        if(item.Key.ToString() != "text")
-                            Console.WriteLine(">");
-
-                        DoHtmlThing(item.Value, amountOfTabs++);  
-
-                        if(item.Key.ToString() != "text")
-                            Console.WriteLine($"</{item.Key}>");   
-
-                    }else if(item.Value.GetType() == typeof(JsonArray)){
-
-                        foreach (var arrayItem in item.Value.AsArray())
-                        {
-                            if(item.Key.ToString() != "text")
-                                Console.Write($"<{item.Key}");  
-
-                            if(arrayItem.GetType()==typeof(JsonObject)){
-
-                                foreach (var arrayObjectItem in arrayItem.AsObject())
-                                {
-                                    if(arrayObjectItem.Key.ToString() == "attributes"){
-                                    
-                                        DoHtmlAttributes(arrayObjectItem.Value);
-                                    }      
-                                }
-
-                                if(item.Key.ToString() != "text")
-                                    Console.WriteLine(">");
-
-                                DoHtmlThing(arrayItem.AsObject(), amountOfTabs++); 
-
-                                if(item.Key.ToString() != "text")
-                                    Console.WriteLine($"</{item.Key}>");   
-
-                            }else{
-                                if(item.Key.ToString() != "text")
-                                    Console.Write(">");
-
-                                Console.Write($"{arrayItem}");   
-
-                                if(item.Key.ToString() != "text")
-                                    Console.WriteLine($"</{item.Key}>");   
-                            }
-                        }
-                        
-                    }else{
-                        if(item.Key.ToString() != "text")
-                            Console.Write($"<{item.Key}");   
-
-                        if(item.Key.ToString() != "text")
-                            Console.Write(">");
-
-                        Console.Write($"{item.Value}");
-
-                        if(item.Key.ToString() != "text")
-                            Console.WriteLine($"</{item.Key}>");   
-                    }  
-
-                }else if( ( bodyTagsSingleton.Contains(item.Key.ToString()) ) || ( headTagsSingleton.Contains(item.Key.ToString()) ) ){
-                    
-                    if(item.Value.GetType() == typeof(JsonArray)){
-
-                        foreach (var arrayItem in item.Value.AsArray())
-                        {
-                            if(arrayItem.GetType()== typeof(JsonObject)){
-
-                                if(item.Key.ToString() != "text")
-                                    Console.Write($"<{item.Key}");  
-
-                                DoHtmlAttributes(arrayItem);
-
-                                if(item.Key.ToString() != "text")
-                                    Console.WriteLine($">");
-                            }else{
-
-                            if(item.Key.ToString() != "text")
-                                Console.Write($"<{item.Key}");   
-
-                            Console.Write($"{arrayItem}");   
-
-                            if(item.Key.ToString() != "text")
-                                Console.WriteLine($">");
-                            }
-                        }
-                    }else{
-
-                        if(item.Value.GetType() == typeof(JsonObject)){
-                            if(item.Key.ToString() != "text")
-                                Console.Write($"<{item.Key}");
-
-                                DoHtmlAttributes(item.Value);
-
-                            if(item.Key.ToString() != "text")
-                                Console.WriteLine($">");
-                        }else 
-                        {
-                            Console.WriteLine($"<{item.Key} {item.Value}>");
-                        }
+                foreach (var innerItem in item.Value.AsObject())
+                {
+                    if(innerItem.Key.ToString() == "attributes"){
+                        DoHtmlAttributes(innerItem.Value);
                     }
+                }
+
+                CloseOpeningTag(item.Key);
+
+                DoHtmlThing(item.Value);  
+
+                WriteClosingTag(item.Key);   
+
+            }else if(item.Value.GetType() == typeof(JsonArray)){
+
+                foreach (var arrayItem in item.Value.AsArray())
+                {
+                    WriteOpeningTag(item.Key);  
+
+                    if(arrayItem.GetType()==typeof(JsonObject)){
+
+                        foreach (var arrayObjectItem in arrayItem.AsObject())
+                        {
+                            if(arrayObjectItem.Key.ToString() == "attributes"){
+                            
+                                DoHtmlAttributes(arrayObjectItem.Value);
+                            }      
+                        }
+
+                        CloseOpeningTag(item.Key);
+
+                        DoHtmlThing(arrayItem.AsObject()); 
+
+                        WriteClosingTag(item.Key);   
+
+                    }else{
+                        CloseOpeningTag(item.Key);
+
+                        Console.Write($"{arrayItem}");   
+
+                        WriteClosingTag(item.Key);
+                    }
+                }
+                
+            }else{
+                WriteOpeningTag(item.Key);
+
+                CloseOpeningTag(item.Key);
+
+                Console.Write($"{item.Value}");
+
+                WriteClosingTag(item.Key) ; 
+            }  
+        }
+        private void HandleSingletonTags(KeyValuePair<string, JsonNode?> item)
+        {
+            if(item.Value.GetType() == typeof(JsonArray)){
+
+                foreach (var arrayItem in item.Value.AsArray())
+                {
+                    if(arrayItem.GetType()== typeof(JsonObject)){
+
+                        WriteOpeningTag(item.Key); 
+
+                        DoHtmlAttributes(arrayItem);
+
+                        CloseOpeningTag(item.Key);
+                    }else{
+
+                    if(item.Key.ToString() != "text")
+                        
+                        Console.Write($"<{item.Key}");   
+
+                        Console.Write($"{arrayItem}");   
+
+                        CloseOpeningTag(item.Key);
+                    }
+                }
+            }else{
+
+                if(item.Value.GetType() == typeof(JsonObject)){
+                    
+                    WriteOpeningTag(item.Key);
+
+                    DoHtmlAttributes(item.Value);
+
+                    CloseOpeningTag(item.Key);
+                }else 
+                {
+                    Console.WriteLine($"<{item.Key} {item.Value}>");
                 }
             }
         }
