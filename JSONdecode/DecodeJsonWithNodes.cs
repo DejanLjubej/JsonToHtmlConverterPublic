@@ -91,7 +91,7 @@ namespace AssignmentCSJSON.JSONdecode
         
         private void HandleRegularTags(KeyValuePair<string, JsonNode?> item)
         {
-            // When the value of name:value pair is in object
+            // When the value of key:value pair is in object
             // we're either dealing with attributes or nesting of tags
             if(item.Value.GetType() == typeof(JsonObject))
             {
@@ -109,13 +109,15 @@ namespace AssignmentCSJSON.JSONdecode
                 HandleHtmlContent(item.Value);  
                 WriteClosingTag(item.Key);   
             }
+            // When the value on key:value pair is an array
+            // we're dealing with multiple tags of the same type
             else if(item.Value.GetType() == typeof(JsonArray))
             {
                 foreach (var arrayItem in item.Value.AsArray())
                 {
                     WriteOpeningTag(item.Key);  
 
-                    if(arrayItem.GetType()==typeof(JsonObject))
+                    if(arrayItem.GetType() == typeof(JsonObject))
                     {
                         foreach (var arrayObjectItem in arrayItem.AsObject())
                         {
@@ -220,8 +222,11 @@ namespace AssignmentCSJSON.JSONdecode
             WriteClosingTag(closginTag);
         }
 
+        // The reason for  "!= text" is for names/keys that are for plain text
         private void WriteOpeningTag(string itemKey)
         {
+            HtmlStringBuilder.Append("\n");
+
             if(itemKey != "text")
             {
                 HtmlStringBuilder.Append($"<{itemKey}");   

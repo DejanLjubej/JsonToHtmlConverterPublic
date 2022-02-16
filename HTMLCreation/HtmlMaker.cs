@@ -8,23 +8,30 @@ namespace HTMLCreation.HtmlMaker{
 
     class HtmlMakerProgram{
 
-        string? _jsonFileToDecode;
-        DecodeJsonWithNodes _JsonToHtmlConverter;
+        static string? jsonDir = "jsonFiles";
+        static string? htmlDir = "htmlFiles";
 
+        static string[]? jsonFiles;
+       
        public static void CreateHtml(){
-           try
-           {
-                string fileToRead = "D:\\Programming\\JobAssignments\\FlawlessCode\\helloWorld.json";
-                DecodeJsonWithNodes decodeDaJeySan =  new DecodeJsonWithNodes(fileToRead); 
-                decodeDaJeySan.Main();
-                string contentToWrite  = decodeDaJeySan.HtmlStringBuilder.ToString();
-                File.WriteAllText("HtmlFile.html", contentToWrite);
-           }
-           catch (System.Exception ex)
-           {
-               Console.Write($"Exception on html maker {ex}");
-                // TODO
-           }
+
+            jsonFiles = Directory.GetFiles(jsonDir); 
+          
+            DecodeJsonWithNodes decodeJsonFiles;
+            string contentToWrite;
+
+            foreach (var item in jsonFiles)
+            {
+                if(item.Contains(".json"))
+                {
+                    decodeJsonFiles =  new DecodeJsonWithNodes(item); 
+                    decodeJsonFiles.Main();    
+                    contentToWrite  = decodeJsonFiles.HtmlStringBuilder.ToString();
+                    string readFilename = item.Replace(jsonDir, "").Replace(".json", ".html");
+                    File.WriteAllText(htmlDir+readFilename, contentToWrite);
+                }
+            }
+ 
        }
     }
 }
