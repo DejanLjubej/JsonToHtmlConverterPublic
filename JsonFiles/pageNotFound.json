@@ -1,22 +1,2490 @@
 {
-	"doctype": "html",
-	"language": "en",
-	"head": {
-		"meta": {
-			"charset": "utf-8",
-			"viewport": {
-				"width": "device-width",
-				"initial-scale": 1
-			}
-		},
-		"title": "Page Not Found"
-	},
-	"body": {
-		"h1": "Page Not Found",
-		"p": [
-			
-			"Sorry, but the page you were trying to view does not exist.",
-			"Sorry, but the page you were trying to view does not exist."
+	"#comment": "",
+	"html": {
+	  "@class": "hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light",
+	  "@lang": "en-us",
+	  "@dir": "ltr",
+	  "@data-css-variable-support": "true",
+	  "@data-authenticated": "false",
+	  "@data-auth-status-determined": "false",
+	  "@data-target": "docs",
+	  "@x-ms-format-detection": "none",
+	  "head": {
+		"meta": [
+		  {
+			"@charset": "utf-8"
+		  },
+		  {
+			"@name": "viewport",
+			"@content": "width=device-width, initial-scale=1.0"
+		  },
+		  {
+			"@property": "og:title",
+			"@content": "How to write to a text file - C# Programming Guide"
+		  },
+		  {
+			"@property": "og:type",
+			"@content": "website"
+		  },
+		  {
+			"@property": "og:url",
+			"@content": "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file"
+		  },
+		  {
+			"@property": "og:description",
+			"@content": "Learn how to write a text file with C#. See several code examples and view additional available resources."
+		  },
+		  {
+			"@property": "og:image",
+			"@content": "https://docs.microsoft.com/dotnet/media/logo_csharp.png"
+		  },
+		  {
+			"@property": "og:image:alt",
+			"@content": "How to write to a text file - C# Programming Guide | Microsoft Docs"
+		  },
+		  {
+			"@name": "twitter:card",
+			"@content": "summary"
+		  },
+		  {
+			"@name": "twitter:site",
+			"@content": "@docsmsft"
+		  },
+		  {
+			"@name": "color-scheme",
+			"@content": "light dark"
+		  },
+		  {
+			"@name": "apiPlatform",
+			"@content": "dotnet"
+		  },
+		  {
+			"@name": "author",
+			"@content": "BillWagner"
+		  },
+		  {
+			"@name": "breadcrumb_path",
+			"@content": "/dotnet/breadcrumb/toc.json"
+		  },
+		  {
+			"@name": "depot_name",
+			"@content": "VS.core-docs"
+		  },
+		  {
+			"@name": "description",
+			"@content": "Learn how to write a text file with C#. See several code examples and view additional available resources."
+		  },
+		  {
+			"@name": "document_id",
+			"@content": "09fbd113-dbad-8aef-4e74-151b0b7189ff"
+		  },
+		  {
+			"@name": "document_version_independent_id",
+			"@content": "1e02473f-562b-aa40-756e-1c147cf41041"
+		  },
+		  {
+			"@name": "gitcommit",
+			"@content": "https://github.com/dotnet/docs/blob/788f746111daecc0143a2201db645f8d591bbc4c/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md"
+		  },
+		  {
+			"@name": "locale",
+			"@content": "en-us"
+		  },
+		  {
+			"@name": "ms.assetid",
+			"@content": "2e99f184-d88b-4719-a7f1-d9ec482aa809"
+		  },
+		  {
+			"@name": "ms.author",
+			"@content": "wiwagn"
+		  },
+		  {
+			"@name": "ms.custom",
+			"@content": "contperf-fy21q3"
+		  },
+		  {
+			"@name": "ms.date",
+			"@content": "02/11/2021"
+		  },
+		  {
+			"@name": "ms.devlang",
+			"@content": "csharp"
+		  },
+		  {
+			"@name": "ms.prod",
+			"@content": "dotnet-csharp"
+		  },
+		  {
+			"@name": "ms.technology",
+			"@content": "csharp-fundamentals"
+		  },
+		  {
+			"@name": "ms.topic",
+			"@content": "how-to"
+		  },
+		  {
+			"@name": "original_content_git_url",
+			"@content": "https://github.com/dotnet/docs/blob/live/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md"
+		  },
+		  {
+			"@name": "page_type",
+			"@content": "conceptual"
+		  },
+		  {
+			"@name": "pdf_url_template",
+			"@content": "https://docs.microsoft.com/pdfstore/en-us/VS.core-docs/{branchName}{pdfName}"
+		  },
+		  {
+			"@name": "recommendations",
+			"@content": "true"
+		  },
+		  {
+			"@name": "schema",
+			"@content": "Conceptual"
+		  },
+		  {
+			"@name": "search.mshattr.devlang",
+			"@content": "csharp"
+		  },
+		  {
+			"@name": "show_latex",
+			"@content": "true"
+		  },
+		  {
+			"@name": "site_name",
+			"@content": "Docs"
+		  },
+		  {
+			"@name": "toc_rel",
+			"@content": "../../toc.json"
+		  },
+		  {
+			"@name": "uhfHeaderId",
+			"@content": "MSDocsHeader-DotNet"
+		  },
+		  {
+			"@name": "updated_at",
+			"@content": "2021-11-29 02:42 PM"
+		  },
+		  {
+			"@name": "word_count",
+			"@content": "548"
+		  },
+		  {
+			"@name": "scope",
+			"@content": ".NET"
+		  }
+		],
+		"link": [
+		  {
+			"@href": "https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file",
+			"@rel": "canonical"
+		  },
+		  {
+			"@rel": "stylesheet",
+			"@href": "/_themes/docs.theme/master/en-us/_themes/styles/254b163d.site-ltr.css "
+		  }
+		],
+		"title": "How to write to a text file - C# Programming Guide | Microsoft Docs",
+		"script": [
+		  {
+			"@id": "msdocs-script",
+			"#text": "var msDocs = {\r\n\t\tdata: {\r\n\t\t\ttimeOrigin: Date.now(),\r\n\t\t\tcontentLocale: 'en-us',\r\n\t\t\tcontentDir: 'ltr',\r\n\t\t\tuserLocale: 'en-us',\r\n\t\t\tuserDir: 'ltr',\r\n\t\t\tpageTemplate: 'Conceptual',\r\n\t\t\tbrand: '',\r\n\t\t\tcontext: {\r\n\r\n\t\t\t},\r\n\t\t\thasBinaryRating: true,\r\n\t\t\thasGithubIssues: true,\r\n\t\t\tshowFeedbackReport: false,\r\n\t\t\tenableTutorialFeedback: false,\r\n\t\t\tfeedbackSystem: 'GitHub',\r\n\t\t\tfeedbackGitHubRepo: 'dotnet/docs',\r\n\t\t\tfeedbackProductUrl: 'https://aka.ms/feedback/report?space=61',\r\n\t\t\tcontentGitUrl: 'https://github.com/dotnet/docs/blob/main/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md',\r\n\t\t\textendBreadcrumb: false,\r\n\t\t\tisEditDisplayable: true,\r\n\t\t\thideViewSource: false,\r\n\t\t\thasPageActions: true,\r\n\t\t\thasBookmark: true,\r\n\t\t\thasShare: true,\r\n\t\t\thasRecommendations: true,\r\n\t\t\tcontributors: [\r\n\t\t\t\t\t\t{ name: \"BillWagner\", url: \"https://github.com/BillWagner\" },\r\n\t\t\t\t\t\t{ name: \"gewarren\", url: \"https://github.com/gewarren\" },\r\n\t\t\t\t\t\t{ name: \"IEvangelist\", url: \"https://github.com/IEvangelist\" },\r\n\t\t\t\t\t\t{ name: \"nschonni\", url: \"https://github.com/nschonni\" },\r\n\t\t\t\t\t\t{ name: \"jdmartinez36\", url: \"https://github.com/jdmartinez36\" },\r\n\t\t\t\t\t\t{ name: \"mairaw\", url: \"https://github.com/mairaw\" },\r\n\t\t\t\t\t\t{ name: \"Youssef1313\", url: \"https://github.com/Youssef1313\" },\r\n\t\t\t\t\t\t{ name: \"nemrism\", url: \"https://github.com/nemrism\" },\r\n\t\t\t\t\t\t{ name: \"yishengjin1413\", url: \"https://github.com/yishengjin1413\" },\r\n\t\t\t\t\t\t{ name: \"nxtn\", url: \"https://github.com/nxtn\" },\r\n\t\t\t\t\t\t{ name: \"pkulikov\", url: \"https://github.com/pkulikov\" },\r\n\t\t\t\t\t\t{ name: \"mjhoffman65\", url: \"https://github.com/mjhoffman65\" },\r\n\t\t\t\t\t\t{ name: \"mikeblome\", url: \"https://github.com/mikeblome\" },\r\n\t\t\t\t\t\t{ name: \"guardrex\", url: \"https://github.com/guardrex\" }\r\n],\r\n\t\t\tmathjax: {\r\n\t\t\t},\r\n\t\t},\r\n\t\tfunctions:{}\r\n\t};"
+		  },
+		  {
+			"@src": "https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"
+		  },
+		  {
+			"@src": "https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"
+		  },
+		  {
+			"@src": "/_themes/docs.theme/master/en-us/_themes/global/5cce29c0.deprecation.js"
+		  },
+		  {
+			"@src": "/_themes/docs.theme/master/en-us/_themes/scripts/8bfb4eff.index-docs.js"
+		  }
 		]
+	  },
+	  "body": {
+		"@lang": "en-us",
+		"@dir": "ltr",
+		"div": [
+		  {
+			"@class": "header-holder has-default-focus",
+			"a": {
+			  "@href": "#main",
+			  "@class": "skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background",
+			  "@tabindex": "1",
+			  "#text": "Skip to main content"
+			},
+			"div": [
+			  {
+				"@hidden": "",
+				"@id": "cookie-consent-holder"
+			  },
+			  {
+				"@id": "unsupported-browser",
+				"@style": "\r\n\t\t\tbackground-color: white;\r\n\t\t\tcolor: black;\r\n\t\t\tpadding: 16px;\r\n\t\t\tborder-bottom: 1px solid grey;",
+				"@hidden": "",
+				"div": {
+				  "@style": "max-width: 800px; margin: 0 auto;",
+				  "p": [
+					{
+					  "@style": "font-size: 24px",
+					  "#text": "This browser is no longer supported."
+					},
+					{
+					  "@style": "font-size: 16px; margin-top: 16px;",
+					  "#text": "Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support."
+					}
+				  ],
+				  "div": {
+					"@style": "margin-top: 12px;",
+					"a": [
+					  {
+						"@href": "https://go.microsoft.com/fwlink/p/?LinkID=2092881 ",
+						"@style": "\r\n\t\t\t\t\t\tbackground-color: #0078d4;\r\n\t\t\t\t\t\tborder: 1px solid #0078d4;\r\n\t\t\t\t\t\tcolor: white;\r\n\t\t\t\t\t\tpadding: 6px 12px;\r\n\t\t\t\t\t\tborder-radius: 2px;\r\n\t\t\t\t\t\tdisplay: inline-block;\r\n\t\t\t\t\t\t",
+						"#text": "Download Microsoft Edge"
+					  },
+					  {
+						"@href": "https://docs.microsoft.com/en-US/lifecycle/faq/internet-explorer-microsoft-edge",
+						"@style": "\r\n\t\t\t\t\t\t\tbackground-color: white;\r\n\t\t\t\t\t\t\tpadding: 6px 12px;\r\n\t\t\t\t\t\t\tborder: 1px solid #505050;\r\n\t\t\t\t\t\t\tcolor: #171717;\r\n\t\t\t\t\t\t\tborder-radius: 2px;\r\n\t\t\t\t\t\t\tdisplay: inline-block;\r\n\t\t\t\t\t\t\t",
+						"#text": "More info"
+					  }
+					]
+				  }
+				}
+			  },
+			  {
+				"@id": "headerAreaHolder",
+				"@data-bi-name": "header",
+				"header": {
+				  "@role": "banner",
+				  "@itemscope": "itemscope",
+				  "@itemtype": "http://schema.org/Organization",
+				  "div": [
+					{
+					  "@class": "nav-bar",
+					  "div": {
+						"@class": "nav-bar-brand",
+						"a": {
+						  "@itemprop": "url",
+						  "@href": "https://www.microsoft.com",
+						  "@aria-label": "Microsoft",
+						  "@class": "nav-bar-button",
+						  "div": [
+							{
+							  "@class": "nav-bar-logo has-background-image theme-display is-light",
+							  "@role": "presentation",
+							  "@aria-hidden": "true",
+							  "@itemprop": "logo",
+							  "@itemscope": "itemscope"
+							},
+							{
+							  "@class": "nav-bar-logo has-background-image theme-display is-dark is-high-contrast",
+							  "@role": "presentation",
+							  "@aria-hidden": "true",
+							  "@itemprop": "logo",
+							  "@itemscope": "itemscope"
+							}
+						  ]
+						}
+					  }
+					},
+					{
+					  "@class": "nav-bar border-top is-hidden-mobile"
+					}
+				  ]
+				}
+			  },
+			  {
+				"@id": "content-header",
+				"@class": "content-header uhf-container has-padding has-default-focus border-bottom-none",
+				"@data-bi-name": "content-header",
+				"nav": {
+				  "@id": "breadcrumbs-deprecated-container",
+				  "@class": "breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop flex-grow-1",
+				  "@data-bi-name": "breadcrumb",
+				  "@role": "navigation",
+				  "@aria-label": "Breadcrumb",
+				  "ul": {
+					"@id": "page-breadcrumbs-deprecated",
+					"@class": "breadcrumbs-deprecated"
+				  }
+				},
+				"div": [
+				  {
+					"@class": "content-header-controls",
+					"button": [
+					  {
+						"@type": "button",
+						"@class": "contents-button button",
+						"@data-bi-name": "contents-expand",
+						"@aria-haspopup": "true",
+						"@data-contents-button": "",
+						"span": [
+						  {
+							"@class": "icon",
+							"span": {
+							  "@class": "docon docon-menu",
+							  "@aria-hidden": "true"
+							}
+						  },
+						  {
+							"@class": "contents-expand-title",
+							"#text": "Contents"
+						  }
+						]
+					  },
+					  {
+						"@type": "button",
+						"@class": "ap-collapse-behavior ap-expanded button",
+						"@data-bi-name": "ap-collapse",
+						"@aria-controls": "action-panel",
+						"span": [
+						  {
+							"@class": "icon",
+							"span": {
+							  "@class": "docon docon-exit-mode",
+							  "@aria-hidden": "true"
+							}
+						  },
+						  "Exit focus mode"
+						]
+					  }
+					]
+				  },
+				  {
+					"@id": "page-actions-deprecated-container",
+					"@class": "has-padding-none-tablet padding-xs font-size-sm display-flex justify-content-space-between flex-grow-1 page-action-holder",
+					"ul": {
+					  "@class": "is-hidden-mobile action-list justify-content-flex-start justify-content-flex-end-tablet display-flex flex-wrap-wrap flex-grow-1 is-unstyled",
+					  "li": [
+						{
+						  "@hidden": "",
+						  "a": {
+							"@id": "lang-link-deprecated",
+							"@class": "button button button-clear button-sm",
+							"@title": "Read in English",
+							"@data-bi-name": "language-toggle",
+							"@data-read-in-link": "",
+							"@data-hidden-parent": "",
+							"span": [
+							  {
+								"@class": "icon docon docon-locale-globe",
+								"@aria-hidden": "true",
+								"@data-read-in-link-icon": ""
+							  },
+							  {
+								"@class": "is-visually-hidden-touch is-hidden-portrait",
+								"@data-read-in-link-text": "",
+								"#text": "Read in English"
+							  }
+							]
+						  }
+						},
+						{
+						  "button": {
+							"@type": "button",
+							"@class": "collection button button-clear button-sm has-inner-focus",
+							"@data-list-type": "collection",
+							"@data-bi-name": "collection",
+							"@title": "Add to collection",
+							"span": [
+							  {
+								"@class": "icon",
+								"@aria-hidden": "true",
+								"span": {
+								  "@class": "docon docon-circle-addition has-text-primary"
+								}
+							  },
+							  {
+								"@class": "collection-status is-visually-hidden-touch is-hidden-portrait",
+								"#text": "Save"
+							  }
+							]
+						  }
+						},
+						{
+						  "@id": "feedback-section-link",
+						  "a": {
+							"@href": "#feedback",
+							"@class": "button  button button-clear button-sm has-inner-focus",
+							"@data-bi-name": "comments",
+							"@title": "Send feedback about this page",
+							"span": [
+							  {
+								"@class": "icon",
+								"@aria-hidden": "true",
+								"span": {
+								  "@class": "docon docon-comment-lines"
+								}
+							  },
+							  {
+								"@class": "is-visually-hidden-touch is-hidden-portrait",
+								"#text": "Feedback"
+							  }
+							]
+						  }
+						},
+						{
+						  "@id": "contenteditbtn",
+						  "a": {
+							"@href": "https://github.com/dotnet/docs/blob/main/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+							"@class": " button button-clear button-sm has-inner-focus",
+							"@title": "Edit This Document",
+							"@data-bi-name": "edit",
+							"@data-original_content_git_url": "https://github.com/dotnet/docs/blob/live/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+							"@data-original_content_git_url_template": "{repo}/blob/{branch}/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+							"@data-pr_repo": "",
+							"@data-pr_branch": "",
+							"span": [
+							  {
+								"@class": "icon",
+								"@aria-hidden": "true",
+								"span": {
+								  "@class": "docon docon-edit-outline"
+								}
+							  },
+							  {
+								"@class": "is-visually-hidden-touch is-hidden-portrait",
+								"#text": "Edit"
+							  }
+							]
+						  }
+						},
+						{
+						  "div": {
+							"@class": "sharing dropdown has-caret",
+							"button": {
+							  "@class": "dropdown-trigger button button-clear button-sm button-block justify-content-flex-start has-inner-focus",
+							  "@aria-controls": "sharing-menu",
+							  "@aria-expanded": "false",
+							  "@title": "Share This Document",
+							  "@data-bi-name": "share",
+							  "span": [
+								{
+								  "@class": "icon",
+								  "@aria-hidden": "true",
+								  "span": {
+									"@class": "docon docon-sharing"
+								  }
+								},
+								{
+								  "@class": "is-visually-hidden-touch is-hidden-portrait",
+								  "#text": "Share"
+								}
+							  ]
+							},
+							"div": {
+							  "@class": "dropdown-menu has-padding-small",
+							  "@id": "sharing-menu",
+							  "ul": {
+								"@data-bi-name": "share-links",
+								"li": [
+								  {
+									"a": {
+									  "@class": "button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-twitter",
+									  "@data-bi-name": "twitter",
+									  "span": [
+										{
+										  "@class": "icon",
+										  "span": {
+											"@class": "docon docon-brand-twitter has-text-primary",
+											"@aria-hidden": "true"
+										  }
+										},
+										"Twitter"
+									  ]
+									}
+								  },
+								  {
+									"a": {
+									  "@class": "button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-linkedin",
+									  "@data-bi-name": "linkedin",
+									  "span": [
+										{
+										  "@class": "icon",
+										  "span": {
+											"@class": "docon docon-brand-linkedin has-text-primary",
+											"@aria-hidden": "true"
+										  }
+										},
+										"LinkedIn"
+									  ]
+									}
+								  },
+								  {
+									"a": {
+									  "@class": "button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-facebook",
+									  "@data-bi-name": "facebook",
+									  "span": [
+										{
+										  "@class": "icon",
+										  "span": {
+											"@class": "docon docon-brand-facebook has-text-primary",
+											"@aria-hidden": "true"
+										  }
+										},
+										"Facebook"
+									  ]
+									}
+								  },
+								  {
+									"a": {
+									  "@class": "button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-email",
+									  "@data-bi-name": "email",
+									  "span": [
+										{
+										  "@class": "icon",
+										  "span": {
+											"@class": "docon docon-mail-message-fill has-text-primary",
+											"@aria-hidden": "true"
+										  }
+										},
+										"Email"
+									  ]
+									}
+								  }
+								]
+							  }
+							}
+						  }
+						}
+					  ]
+					},
+					"button": {
+					  "@id": "page-actions-toc-button-deprecated",
+					  "@type": "button",
+					  "@class": "border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus",
+					  "@aria-label": "Contents",
+					  "@data-bi-name": "contents-expand",
+					  "@data-contents-button": "",
+					  "span": [
+						{
+						  "@class": "icon",
+						  "span": {
+							"@class": "docon docon-editor-list-bullet",
+							"@aria-hidden": "true"
+						  }
+						},
+						{
+						  "@class": "contents-expand-title",
+						  "#text": "Table of contents"
+						}
+					  ]
+					},
+					"div": [
+					  {
+						"@class": "is-invisible"
+					  },
+					  {
+						"@class": "is-hidden-tablet level-item is-flexible level-right",
+						"button": {
+						  "@type": "button",
+						  "@class": "page-actions-button  button button-clear button-sm is-hidden-tablet has-inner-focus border is-full-height  margin-left-xxs",
+						  "@aria-label": "Page Actions",
+						  "@data-bi-name": "pageactions",
+						  "span": {
+							"@class": "icon",
+							"span": {
+							  "@class": "docon docon-more-vertical",
+							  "@aria-hidden": "true"
+							}
+						  }
+						}
+					  }
+					]
+				  }
+				]
+			  },
+			  {
+				"@id": "disclaimer-holder",
+				"@class": "has-overflow-hidden has-default-focus",
+				"#comment": ""
+			  }
+			],
+			"#comment": ""
+		  },
+		  {
+			"@class": "mainContainer  uhf-container has-top-padding has-default-focus",
+			"@data-bi-name": "body",
+			"div": {
+			  "@class": "columns has-large-gaps is-gapless-mobile ",
+			  "div": {
+				"@id": "left-container",
+				"@class": "left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop",
+				"nav": {
+				  "@id": "affixed-left-container",
+				  "@class": "position-fixed display-flex flex-direction-column",
+				  "@role": "navigation",
+				  "@aria-label": "Primary"
+				}
+			  },
+			  "#comment": [
+				"",
+				"",
+				"",
+				""
+			  ],
+			  "section": {
+				"@class": "primary-holder column is-two-thirds-tablet is-three-quarters-desktop",
+				"#comment": [
+				  "",
+				  ""
+				],
+				"div": {
+				  "@class": "columns is-gapless-mobile has-large-gaps ",
+				  "div": [
+					{
+					  "@id": "main-column",
+					  "@class": "column  is-full is-8-desktop",
+					  "main": {
+						"@id": "main",
+						"@role": "main",
+						"@data-bi-name": "content",
+						"@lang": "en-us",
+						"@dir": "ltr",
+						"#comment": [
+						  "",
+						  "",
+						  "",
+						  ""
+						],
+						"div": [
+						  {
+							"@id": "article-header",
+							"@class": "background-color-body margin-top-xs-tablet margin-bottom-xs",
+							"@aria-label": "content-header",
+							"@hidden": "",
+							"div": {
+							  "@class": "display-flex align-items-center ",
+							  "details": {
+								"@id": "article-header-breadcrumbs-overflow-popover",
+								"@class": "popover",
+								"@data-for": "article-header-breadcrumbs",
+								"summary": {
+								  "@class": "button button-clear button-primary button-sm",
+								  "span": {
+									"@class": "icon",
+									"span": {
+									  "@class": "docon docon-more"
+									}
+								  }
+								},
+								"div": {
+								  "@id": "article-header-breadcrumbs-overflow",
+								  "@class": "popover-content padding-none"
+								}
+							  },
+							  "bread-crumbs": {
+								"@id": "article-header-breadcrumbs",
+								"@class": "overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop",
+								"@id": "page-breadcrumbs"
+							  },
+							  "div": {
+								"@id": "article-header-page-actions",
+								"@class": "opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch",
+								"a": [
+								  {
+									"@id": "lang-link-tablet",
+									"@class": "button button-primary button-clear button-sm display-none display-inline-flex-tablet",
+									"@title": "Read in English",
+									"@data-bi-name": "language-toggle",
+									"@data-read-in-link": "",
+									"@hidden": "",
+									"span": [
+									  {
+										"@class": "icon margin-none",
+										"@aria-hidden": "true",
+										"@data-read-in-link-icon": "",
+										"span": {
+										  "@class": "docon docon-locale-globe"
+										}
+									  },
+									  {
+										"@class": "is-visually-hidden",
+										"@data-read-in-link-text": "",
+										"#text": "Read in English"
+									  }
+									]
+								  },
+								  {
+									"@id": "feedback-section-link",
+									"@aria-label": "Feedback",
+									"@href": "#feedback",
+									"@class": "button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet",
+									"@data-bi-name": "comments",
+									"@title": "Send feedback about this page",
+									"span": {
+									  "@class": "icon margin-none",
+									  "@aria-hidden": "true",
+									  "span": {
+										"@class": "docon docon-comment-lines"
+									  }
+									}
+								  },
+								  {
+									"@id": "contenteditbtn",
+									"@aria-label": "Edit",
+									"@href": "https://github.com/dotnet/docs/blob/main/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+									"@class": "button button-clear button-sm button-primary text-decoration-none display-none display-inline-flex-tablet",
+									"@title": "Edit This Document",
+									"@data-bi-name": "edit",
+									"@data-original_content_git_url": "https://github.com/dotnet/docs/blob/live/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+									"@data-original_content_git_url_template": "{repo}/blob/{branch}/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+									"@data-pr_repo": "",
+									"@data-pr_branch": "",
+									"span": {
+									  "@class": "icon margin-none",
+									  "@aria-hidden": "true",
+									  "span": {
+										"@class": "docon docon-edit-outline"
+									  }
+									}
+								  }
+								],
+								"button": {
+								  "@type": "button",
+								  "@class": "collection button button-clear button-sm button-primary display-none display-inline-flex-tablet",
+								  "@data-list-type": "collection",
+								  "@data-bi-name": "collection",
+								  "@title": "Add to collection",
+								  "span": [
+									{
+									  "@class": "icon margin-none",
+									  "@aria-hidden": "true",
+									  "span": {
+										"@class": "docon docon-circle-addition"
+									  }
+									},
+									{
+									  "@class": "collection-status is-visually-hidden",
+									  "#text": "Save"
+									}
+								  ]
+								},
+								"details": {
+								  "@class": "popover popover-right",
+								  "@id": "article-header-page-actions-overflow",
+								  "summary": {
+									"@class": "justify-content-flex-start button button-clear button-sm button-primary",
+									"@aria-label": "More actions",
+									"span": {
+									  "@class": "icon",
+									  "@aria-hidden": "true",
+									  "span": {
+										"@class": "docon docon-more-vertical"
+									  }
+									}
+								  },
+								  "div": {
+									"@class": "popover-content padding-none",
+									"button": [
+									  {
+										"@data-page-action-item": "overflow-mobile",
+										"@type": "button",
+										"@class": "justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet",
+										"@aria-label": "Contents",
+										"@data-bi-name": "contents-expand",
+										"@data-contents-button": "",
+										"@data-popover-close": "",
+										"span": [
+										  {
+											"@class": "icon",
+											"span": {
+											  "@class": "docon docon-editor-list-bullet",
+											  "@aria-hidden": "true"
+											}
+										  },
+										  {
+											"@class": "contents-expand-title",
+											"#text": "Table of contents"
+										  }
+										]
+									  },
+									  {
+										"@type": "button",
+										"@class": "collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet",
+										"@data-list-type": "collection",
+										"@data-bi-name": "collection",
+										"@title": "Add to collection",
+										"@data-page-action-item": "overflow-mobile",
+										"@data-check-hidden": "true",
+										"@data-popover-close": "",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-circle-addition"
+											}
+										  },
+										  {
+											"@class": "collection-status",
+											"#text": "Save"
+										  }
+										]
+									  }
+									],
+									"a": [
+									  {
+										"@id": "lang-link-overflow",
+										"@class": "justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet",
+										"@title": "Read in English",
+										"@data-bi-name": "language-toggle",
+										"@data-page-action-item": "overflow-mobile",
+										"@data-check-hidden": "true",
+										"@data-read-in-link": "",
+										"@hidden": "",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"@data-read-in-link-icon": "",
+											"span": {
+											  "@class": "docon docon-locale-globe"
+											}
+										  },
+										  {
+											"@data-read-in-link-text": "",
+											"#text": "Read in English"
+										  }
+										]
+									  },
+									  {
+										"@id": "feedback-section-link",
+										"@aria-label": "Feedback",
+										"@href": "#feedback",
+										"@class": "button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet",
+										"@data-bi-name": "comments",
+										"@title": "Send feedback about this page",
+										"@data-page-action-item": "overflow-mobile",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-comment-lines"
+											}
+										  },
+										  "Feedback"
+										]
+									  },
+									  {
+										"@id": "contenteditbtn",
+										"@data-page-action-item": "overflow-mobile",
+										"@aria-label": "Edit",
+										"@href": "https://github.com/dotnet/docs/blob/main/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+										"@class": "justify-content-flex-start has-inner-focus button button-clear button-sm button-block text-decoration-none display-none-tablet",
+										"@title": "Edit This Document",
+										"@data-bi-name": "edit",
+										"@data-original_content_git_url": "https://github.com/dotnet/docs/blob/live/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+										"@data-original_content_git_url_template": "{repo}/blob/{branch}/docs/csharp/programming-guide/file-system/how-to-write-to-a-text-file.md",
+										"@data-pr_repo": "",
+										"@data-pr_branch": "",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-edit-outline"
+											}
+										  },
+										  "Edit"
+										]
+									  },
+									  {
+										"@class": "button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter",
+										"@data-bi-name": "twitter",
+										"@data-page-action-item": "overflow-all",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-brand-twitter"
+											}
+										  },
+										  "Twitter"
+										]
+									  },
+									  {
+										"@class": "button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin",
+										"@data-bi-name": "linkedin",
+										"@data-page-action-item": "overflow-all",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-brand-linkedin"
+											}
+										  },
+										  "LinkedIn"
+										]
+									  },
+									  {
+										"@class": "button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook",
+										"@data-bi-name": "facebook",
+										"@data-page-action-item": "overflow-all",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-brand-facebook"
+											}
+										  },
+										  "Facebook"
+										]
+									  },
+									  {
+										"@class": "button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email",
+										"@data-bi-name": "email",
+										"@data-page-action-item": "overflow-all",
+										"span": [
+										  {
+											"@class": "icon",
+											"@aria-hidden": "true",
+											"span": {
+											  "@class": "docon docon-mail-message-fill"
+											}
+										  },
+										  "Email"
+										]
+									  }
+									],
+									"div": {
+									  "@aria-hidden": "true",
+									  "@class": "margin-none display-none-tablet border-top",
+									  "@data-page-action-item": "overflow-all"
+									}
+								  }
+								}
+							  }
+							}
+						  },
+						  {
+							"@class": "",
+							"button": {
+							  "@type": "button",
+							  "@class": "border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus",
+							  "@aria-label": "Contents",
+							  "@data-bi-name": "contents-expand",
+							  "@data-contents-button": "",
+							  "@hidden": "",
+							  "span": [
+								{
+								  "@class": "icon",
+								  "span": {
+									"@class": "docon docon-editor-list-bullet",
+									"@aria-hidden": "true"
+								  }
+								},
+								{
+								  "@class": "contents-expand-title",
+								  "#text": "Table of contents"
+								}
+							  ]
+							}
+						  },
+						  {
+							"@class": "content ",
+							"h1": {
+							  "@id": "how-to-write-to-a-text-file-c-programming-guide",
+							  "#text": "How to write to a text file (C# Programming Guide)"
+							},
+							"div": {
+							  "@class": "display-flex-tablet justify-content-space-between-tablet page-metadata-container",
+							  "ul": {
+								"@class": "metadata page-metadata",
+								"@data-bi-name": "page info",
+								"@lang": "en-us",
+								"@dir": "ltr",
+								"li": [
+								  "Article",
+								  {
+									"time": {
+									  "@class": "is-invisible",
+									  "@data-article-date": "",
+									  "@aria-label": "Article review date",
+									  "@datetime": "2021-11-29T14:42:00Z",
+									  "@data-article-date-source": "git",
+									  "#text": "11/29/2021"
+									}
+								  },
+								  {
+									"@class": "readingTime",
+									"#text": "2 minutes to read"
+								  },
+								  {
+									"@class": "contributors-holder",
+									"ul": {
+									  "@class": "facepile margin-left-none is-small",
+									  "@data-bi-name": "contributors",
+									  "li": [
+										{
+										  "@class": "facepile-item",
+										  "a": {
+											"@href": "https://github.com/BillWagner",
+											"@title": "BillWagner",
+											"@aria-label": "BillWagnerGithub profile",
+											"@data-src": "https://github.com/BillWagner.png?size=32",
+											"@data-contributor-name": "BillWagner",
+											"@class": "facepile-item-coin",
+											"img": {
+											  "@class": "facepile-item-coin-image durable-image",
+											  "@aria-hidden": "true",
+											  "@src": "https://github.com/BillWagner.png?size=32",
+											  "@role": "presentation",
+											  "@onerror": "this.className='facepile-item-coin-image durable-image has-error';"
+											},
+											"span": {
+											  "@class": "facepile-item-coin-text durable-image-fallback facepile-item-teal",
+											  "@aria-hidden": "true",
+											  "#text": "B"
+											}
+										  }
+										},
+										{
+										  "@class": "facepile-item",
+										  "a": {
+											"@href": "https://github.com/gewarren",
+											"@title": "gewarren",
+											"@aria-label": "gewarrenGithub profile",
+											"@data-src": "https://github.com/gewarren.png?size=32",
+											"@data-contributor-name": "gewarren",
+											"@class": "facepile-item-coin",
+											"img": {
+											  "@class": "facepile-item-coin-image durable-image",
+											  "@aria-hidden": "true",
+											  "@src": "https://github.com/gewarren.png?size=32",
+											  "@role": "presentation",
+											  "@onerror": "this.className='facepile-item-coin-image durable-image has-error';"
+											},
+											"span": {
+											  "@class": "facepile-item-coin-text durable-image-fallback facepile-item-red",
+											  "@aria-hidden": "true",
+											  "#text": "g"
+											}
+										  }
+										},
+										{
+										  "@class": "facepile-item",
+										  "a": {
+											"@href": "https://github.com/IEvangelist",
+											"@title": "IEvangelist",
+											"@aria-label": "IEvangelistGithub profile",
+											"@data-src": "https://github.com/IEvangelist.png?size=32",
+											"@data-contributor-name": "IEvangelist",
+											"@class": "facepile-item-coin",
+											"img": {
+											  "@class": "facepile-item-coin-image durable-image",
+											  "@aria-hidden": "true",
+											  "@src": "https://github.com/IEvangelist.png?size=32",
+											  "@role": "presentation",
+											  "@onerror": "this.className='facepile-item-coin-image durable-image has-error';"
+											},
+											"span": {
+											  "@class": "facepile-item-coin-text durable-image-fallback facepile-item-blue",
+											  "@aria-hidden": "true",
+											  "#text": "I"
+											}
+										  }
+										},
+										{
+										  "@class": "facepile-item",
+										  "a": {
+											"@href": "https://github.com/nschonni",
+											"@title": "nschonni",
+											"@aria-label": "nschonniGithub profile",
+											"@data-src": "https://github.com/nschonni.png?size=32",
+											"@data-contributor-name": "nschonni",
+											"@class": "facepile-item-coin",
+											"img": {
+											  "@class": "facepile-item-coin-image durable-image",
+											  "@aria-hidden": "true",
+											  "@src": "https://github.com/nschonni.png?size=32",
+											  "@role": "presentation",
+											  "@onerror": "this.className='facepile-item-coin-image durable-image has-error';"
+											},
+											"span": {
+											  "@class": "facepile-item-coin-text durable-image-fallback facepile-item-teal",
+											  "@aria-hidden": "true",
+											  "#text": "n"
+											}
+										  }
+										},
+										{
+										  "@class": "facepile-item",
+										  "a": {
+											"@href": "https://github.com/jdmartinez36",
+											"@title": "jdmartinez36",
+											"@aria-label": "jdmartinez36Github profile",
+											"@data-src": "https://github.com/jdmartinez36.png?size=32",
+											"@data-contributor-name": "jdmartinez36",
+											"@class": "facepile-item-coin",
+											"img": {
+											  "@class": "facepile-item-coin-image durable-image",
+											  "@aria-hidden": "true",
+											  "@src": "https://github.com/jdmartinez36.png?size=32",
+											  "@role": "presentation",
+											  "@onerror": "this.className='facepile-item-coin-image durable-image has-error';"
+											},
+											"span": {
+											  "@class": "facepile-item-coin-text durable-image-fallback facepile-item-red",
+											  "@aria-hidden": "true",
+											  "#text": "j"
+											}
+										  }
+										},
+										{
+										  "@class": "facepile-item",
+										  "button": {
+											"@aria-label": "View all contributors",
+											"@class": "facepile-item-more",
+											"@title": "View all contributors",
+											"div": {
+											  "@class": "facepile-item-coin",
+											  "@aria-hidden": "true",
+											  "span": {
+												"@class": "facepile-item-coin-text",
+												"@aria-hidden": "true",
+												"#text": "+9"
+											  }
+											}
+										  }
+										}
+									  ]
+									}
+								  }
+								]
+							  },
+							  "div": {
+								"@class": "dropdown display-flex",
+								"@data-hide-on-archived": "",
+								"button": [
+								  {
+									"@class": "dropdown-trigger link-button font-size-sm margin-left-none margin-left-xxs-tablet has-no-wrap",
+									"@aria-controls": "is-this-helpful",
+									"@aria-expanded": "false",
+									"@title": "Is this page helpful?",
+									"#text": "Is this page helpful?"
+								  },
+								  {
+									"@tabindex": "-1",
+									"@role": "presentation",
+									"@class": "dropdown-trigger thumb-rating like link-button padding-xxs padding-right-none",
+									"@data-binary-rating-response": "rating-yes",
+									"@title": "Yes",
+									"@type": "button",
+									"@data-bi-name": "rating-yes",
+									"@data-bi-sat": "1",
+									"@aria-controls": "is-this-helpful",
+									"@aria-expanded": "false",
+									"span": {
+									  "@aria-hidden": "true",
+									  "@class": "icon docon docon-like"
+									}
+								  },
+								  {
+									"@tabindex": "-1",
+									"@role": "presentation",
+									"@class": "dropdown-trigger thumb-rating dislike link-button padding-xxs padding-right-none",
+									"@data-binary-rating-response": "rating-no",
+									"@title": "No",
+									"@type": "button",
+									"@data-bi-name": "rating-no",
+									"@data-bi-sat": "0",
+									"@aria-controls": "is-this-helpful",
+									"@aria-expanded": "false",
+									"span": {
+									  "@aria-hidden": "true",
+									  "@class": "icon docon docon-dislike"
+									}
+								  }
+								],
+								"div": {
+								  "@class": "dropdown-menu border-radius",
+								  "@id": "is-this-helpful",
+								  "@role": "menu",
+								  "div": {
+									"@class": "padding-xs",
+									"@data-bi-name": "rating",
+									"@data-binary-rating-container": "",
+									"div": {
+									  "@class": "binary-rating",
+									  "@data-binary-rating-hide-on-submit": "",
+									  "form": {
+										"@class": "feedback-verbatim-form width-250-tablet",
+										"@data-feedback-verbatim-form": "",
+										"@id": "main-page-rating-container",
+										"div": [
+										  {
+											"@class": "binary-rating-buttons",
+											"h3": {
+											  "@id": "binary-rating-heading",
+											  "@class": "font-weight-semibold margin-top-none margin-bottom-xs font-size-h5 has-caret",
+											  "#text": "Is this page helpful?"
+											},
+											"div": {
+											  "@class": "buttons",
+											  "button": [
+												{
+												  "@class": "thumb-rating like margin-right-xxs button button-clear button-sm",
+												  "@data-binary-rating-response": "rating-yes",
+												  "@title": "Yes",
+												  "@type": "button",
+												  "@data-bi-name": "rating-yes",
+												  "@data-bi-sat": "1",
+												  "span": [
+													{
+													  "@aria-hidden": "true",
+													  "@class": "icon docon docon-like"
+													},
+													"Yes"
+												  ]
+												},
+												{
+												  "@class": "thumb-rating dislike button button-clear button-sm",
+												  "@data-binary-rating-response": "rating-no",
+												  "@title": "No",
+												  "@data-bi-name": "rating-no",
+												  "@type": "button",
+												  "@data-bi-sat": "0",
+												  "span": [
+													{
+													  "@aria-hidden": "true",
+													  "@class": "icon docon docon-dislike"
+													},
+													"No"
+												  ]
+												}
+											  ]
+											}
+										  },
+										  {
+											"@id": "binary-verbatim-container",
+											"@class": "font-size-xs margin-top-xs",
+											"div": [
+											  {
+												"@class": "verbatim-textarea",
+												"label": {
+												  "@for": "binary-rating-textarea",
+												  "@class": "visually-hidden",
+												  "#text": "Any additional feedback?"
+												},
+												"textarea": {
+												  "@id": "binary-rating-textarea",
+												  "@data-binary-rating-text": "",
+												  "@rows": "4",
+												  "@maxlength": "999",
+												  "@placeholder": "Any additional feedback?",
+												  "@class": "textarea has-inner-focus"
+												}
+											  },
+											  {
+												"@class": "buttons buttons-right margin-top-xs margin-right-xxs",
+												"button": {
+												  "@class": "submit-rating button button-primary button-filled button-sm",
+												  "@data-bi-name": "rating-verbatim",
+												  "@data-binary-rating-submit": "",
+												  "@type": "submit",
+												  "@disabled": "",
+												  "#text": "Submit"
+												}
+											  }
+											],
+											"p": {
+											  "@class": "has-line-height-reset has-text-wrap",
+											  "a": {
+												"@href": "https://privacy.microsoft.com/en-us/privacystatement",
+												"#text": "Privacy policy."
+											  },
+											  "#text": "Feedback will be sent to Microsoft: By pressing the submit button, your feedback will be used to improve Microsoft products and services."
+											}
+										  }
+										]
+									  }
+									},
+									"p": {
+									  "@data-binary-rating-onsubmit-message": "main-page-rating-container",
+									  "@tabindex": "-1",
+									  "@class": "margin-none inner-focus",
+									  "@hidden": "",
+									  "#text": "Thank you."
+									}
+								  }
+								}
+							  }
+							},
+							"nav": {
+							  "@id": "center-doc-outline",
+							  "@class": "doc-outline is-hidden-desktop",
+							  "@data-bi-name": "intopic toc",
+							  "@role": "navigation",
+							  "@aria-label": "Article Outline",
+							  "h3": "In this article"
+							},
+							"#comment": "",
+							"p": [
+							  {
+								"a": {
+								  "@href": "/en-us/dotnet/api/system.io.file",
+								  "@class": "no-loc",
+								  "@data-linktype": "absolute-path",
+								  "#text": "System.IO.File"
+								},
+								"code": [
+								  "IEnumerable<string>",
+								  "string"
+								],
+								"#text": [
+								  "In this article, there are several examples showing various ways to write text to a file. The first two examples use static convenience methods on the",
+								  "class to write each element of any",
+								  "and a",
+								  "to a text file. The third example shows how to add text to a file when you have to process each line individually as you write to the file. In the first three examples, you overwrite all existing content in the file. The final example shows how to append text to an existing file."
+								]
+							  },
+							  {
+								"a": [
+								  {
+									"@href": "/en-us/dotnet/api/system.string.format",
+									"@class": "no-loc",
+									"@data-linktype": "absolute-path",
+									"#text": "Format"
+								  },
+								  {
+									"@href": "../../language-reference/tokens/interpolated",
+									"@data-linktype": "relative-path",
+									"#text": "string interpolation"
+								  }
+								],
+								"#text": [
+								  "These examples all write string literals to files. If you want to format text written to a file, use the",
+								  "method or C#",
+								  "feature."
+								]
+							  },
+							  "The preceding source code example:",
+							  "The preceding source code example:",
+							  "The preceding source code example:",
+							  "The preceding source code example:",
+							  "The following conditions may cause an exception:",
+							  "There are additional conditions that may cause exceptions when working with the file system, it is best to program defensively."
+							],
+							"h2": [
+							  {
+								"@id": "write-a-collection-of-strings-to-a-file",
+								"#text": "Write a collection of strings to a file"
+							  },
+							  {
+								"@id": "write-one-string-to-a-file",
+								"#text": "Write one string to a file"
+							  },
+							  {
+								"@id": "write-selected-strings-from-an-array-to-a-file",
+								"#text": "Write selected strings from an array to a file"
+							  },
+							  {
+								"@id": "append-text-to-an-existing-file",
+								"#text": "Append text to an existing file"
+							  },
+							  {
+								"@id": "exceptions",
+								"#text": "Exceptions"
+							  },
+							  {
+								"@id": "see-also",
+								"#text": "See also"
+							  }
+							],
+							"pre": [
+							  {
+								"code": {
+								  "@class": "lang-csharp",
+								  "#text": "using System.IO;\r\nusing System.Threading.Tasks;\r\n\r\nclass WriteAllLines\r\n{\r\n    public static async Task ExampleAsync()\r\n    {\r\n        string[] lines =\r\n        {\r\n            \"First line\", \"Second line\", \"Third line\" \r\n        };\r\n\r\n        await File.WriteAllLinesAsync(\"WriteLines.txt\", lines);\r\n    }\r\n}"
+								}
+							  },
+							  {
+								"code": {
+								  "@class": "lang-csharp",
+								  "#text": "using System.IO;\r\nusing System.Threading.Tasks;\r\n\r\nclass WriteAllText\r\n{\r\n    public static async Task ExampleAsync()\r\n    {\r\n        string text =\r\n            \"A class is the most powerful data type in C#. Like a structure, \" +\r\n            \"a class defines the data and behavior of the data type. \";\r\n\r\n        await File.WriteAllTextAsync(\"WriteText.txt\", text);\r\n    }\r\n}"
+								}
+							  },
+							  {
+								"code": {
+								  "@class": "lang-csharp",
+								  "#text": "using System.IO;\r\nusing System.Threading.Tasks;\r\n\r\nclass StreamWriterOne\r\n{\r\n    public static async Task ExampleAsync()\r\n    {\r\n        string[] lines = { \"First line\", \"Second line\", \"Third line\" };\r\n        using StreamWriter file = new(\"WriteLines2.txt\");\r\n\r\n        foreach (string line in lines)\r\n        {\r\n            if (!line.Contains(\"Second\"))\r\n            {\r\n                await file.WriteLineAsync(line);\r\n            }\r\n        }\r\n    }\r\n}"
+								}
+							  },
+							  {
+								"code": {
+								  "@class": "lang-csharp",
+								  "#text": "using System.IO;\r\nusing System.Threading.Tasks;\r\n\r\nclass StreamWriterTwo\r\n{\r\n    public static async Task ExampleAsync()\r\n    {\r\n        using StreamWriter file = new(\"WriteLines2.txt\", append: true);\r\n        await file.WriteLineAsync(\"Fourth line\");\r\n    }\r\n}"
+								}
+							  }
+							],
+							"ul": [
+							  {
+								"li": [
+								  {
+									"p": "Instantiates a string array with three values."
+								  },
+								  {
+									"p": {
+									  "a": {
+										"@href": "/en-us/dotnet/api/system.io.file.writealllinesasync",
+										"@class": "no-loc",
+										"@data-linktype": "absolute-path",
+										"#text": "File.WriteAllLinesAsync"
+									  },
+									  "#text": [
+										"Awaits a call to",
+										"which:"
+									  ]
+									},
+									"ul": {
+									  "li": [
+										{
+										  "em": "WriteLines.txt",
+										  "#text": [
+											"Asynchronously creates a file name",
+											". If the file already exists, it is overwritten."
+										  ]
+										},
+										"Writes the given lines to the file.",
+										"Closes the file, automatically flushing and disposing as needed."
+									  ]
+									}
+								  }
+								]
+							  },
+							  {
+								"li": [
+								  {
+									"p": "Instantiates a string given the assigned string literal."
+								  },
+								  {
+									"p": {
+									  "a": {
+										"@href": "/en-us/dotnet/api/system.io.file.writealltextasync",
+										"@class": "no-loc",
+										"@data-linktype": "absolute-path",
+										"#text": "File.WriteAllTextAsync"
+									  },
+									  "#text": [
+										"Awaits a call to",
+										"which:"
+									  ]
+									},
+									"ul": {
+									  "li": [
+										{
+										  "em": "WriteText.txt",
+										  "#text": [
+											"Asynchronously creates a file name",
+											". If the file already exists, it is overwritten."
+										  ]
+										},
+										"Writes the given text to the file.",
+										"Closes the file, automatically flushing and disposing as needed."
+									  ]
+									}
+								  }
+								]
+							  },
+							  {
+								"li": [
+								  "Instantiates a string array with three values.",
+								  {
+									"a": [
+									  {
+										"@href": "/en-us/dotnet/api/system.io.streamwriter",
+										"@class": "no-loc",
+										"@data-linktype": "absolute-path",
+										"#text": "StreamWriter"
+									  },
+									  {
+										"@href": "../../whats-new/csharp-8#using-declarations",
+										"@data-linktype": "relative-path",
+										"#text": "using declaration"
+									  }
+									],
+									"em": "WriteLines2.txt",
+									"#text": [
+									  "Instantiates a",
+									  "with a file path of",
+									  "as a",
+									  "."
+									]
+								  },
+								  "Iterates through all the lines.",
+								  {
+									"a": {
+									  "@href": "/en-us/dotnet/api/system.io.streamwriter.writelineasync#system-io-streamwriter-writelineasync(system-string)",
+									  "@class": "no-loc",
+									  "@data-linktype": "absolute-path",
+									  "#text": "StreamWriter.WriteLineAsync(String)"
+									},
+									"code": "\"Second\"",
+									"#text": [
+									  "Conditionally awaits a call to",
+									  ", which writes the line to the file when the line doesn't contain",
+									  "."
+									]
+								  }
+								]
+							  },
+							  {
+								"li": [
+								  "Instantiates a string array with three values.",
+								  {
+									"a": [
+									  {
+										"@href": "/en-us/dotnet/api/system.io.streamwriter",
+										"@class": "no-loc",
+										"@data-linktype": "absolute-path",
+										"#text": "StreamWriter"
+									  },
+									  {
+										"@href": "../../whats-new/csharp-8#using-declarations",
+										"@data-linktype": "relative-path",
+										"#text": "using declaration"
+									  }
+									],
+									"em": "WriteLines2.txt",
+									"code": "true",
+									"#text": [
+									  "Instantiates a",
+									  "with a file path of",
+									  "as a",
+									  ", passing in",
+									  "to append."
+									]
+								  },
+								  {
+									"a": {
+									  "@href": "/en-us/dotnet/api/system.io.streamwriter.writelineasync#system-io-streamwriter-writelineasync(system-string)",
+									  "@class": "no-loc",
+									  "@data-linktype": "absolute-path",
+									  "#text": "StreamWriter.WriteLineAsync(String)"
+									},
+									"#text": [
+									  "Awaits a call to",
+									  ", which writes the string to the file as an appended line."
+									]
+								  }
+								]
+							  },
+							  {
+								"li": [
+								  {
+									"a": {
+									  "@href": "/en-us/dotnet/api/system.invalidoperationexception",
+									  "@class": "no-loc",
+									  "@data-linktype": "absolute-path",
+									  "#text": "InvalidOperationException"
+									},
+									"#text": ": The file exists and is read-only."
+								  },
+								  {
+									"a": {
+									  "@href": "/en-us/dotnet/api/system.io.pathtoolongexception",
+									  "@class": "no-loc",
+									  "@data-linktype": "absolute-path",
+									  "#text": "PathTooLongException"
+									},
+									"#text": ": The path name may be too long."
+								  },
+								  {
+									"a": {
+									  "@href": "/en-us/dotnet/api/system.io.ioexception",
+									  "@class": "no-loc",
+									  "@data-linktype": "absolute-path",
+									  "#text": "IOException"
+									},
+									"#text": ": The disk may be full."
+								  }
+								]
+							  },
+							  {
+								"li": [
+								  {
+									"a": {
+									  "@href": "../",
+									  "@data-linktype": "relative-path",
+									  "#text": "C# Programming Guide"
+									}
+								  },
+								  {
+									"a": {
+									  "@href": "./",
+									  "@data-linktype": "relative-path",
+									  "#text": "File System and the Registry (C# Programming Guide)"
+									}
+								  }
+								]
+							  }
+							]
+						  }
+						]
+					  },
+					  "#comment": [
+						"",
+						"",
+						"",
+						"",
+						"",
+						""
+					  ],
+					  "section": [
+						{
+						  "@id": "recommendations-section",
+						  "@data-bi-name": "recommendations"
+						},
+						{
+						  "@class": "feedback-section position-relative",
+						  "@data-bi-name": "feedback-section",
+						  "h2": {
+							"@id": "feedback",
+							"@class": "title is-3 has-margin-top-large",
+							"#text": "Feedback"
+						  },
+						  "div": [
+							{
+							  "@class": "alert choose-feedback-type",
+							  "p": {
+								"@aria-hidden": "true",
+								"@id": "send-feedback-about",
+								"#text": "Submit and view feedback for"
+							  },
+							  "div": {
+								"@class": "choose-feedback-buttons margin-top-xs",
+								"a": [
+								  {
+									"@class": "button has-external-link-indicator feedback-type-product margin-bottom-xxs",
+									"@aria-label": "Send feedback about this product",
+									"@href": "https://aka.ms/feedback/report?space=61",
+									"@data-bi-name": "product-feedback",
+									"span": "This product"
+								  },
+								  {
+									"@class": "button feedback-type-product margin-bottom-xxs github-link",
+									"@aria-label": "Send feedback about this page",
+									"@data-bi-name": "create-issue-on-github",
+									"span": [
+									  {
+										"@aria-hidden": "true",
+										"@class": "docon docon-brand-github has-padding-right-extra-small"
+									  },
+									  "This page"
+									]
+								  }
+								]
+							  }
+							},
+							{
+							  "@class": "action-container display-flex justify-content-flex-end margin-block-xxs",
+							  "a": {
+								"@class": "view-on-github has-external-link-indicator",
+								"@data-bi-name": "view-on-github",
+								"@href": "https://github.com/dotnet/docs/issues",
+								"span": [
+								  {
+									"@aria-hidden": "true",
+									"@class": "docon docon-brand-github"
+								  },
+								  "View all page feedback"
+								]
+							  }
+							}
+						  ]
+						}
+					  ],
+					  "div": {
+						"@class": "border-top is-visible-interactive has-default-focus has-margin-top-large ",
+						"footer": {
+						  "@id": "footer-interactive",
+						  "@data-bi-name": "footer",
+						  "@class": "footer-layout",
+						  "div": {
+							"@class": "display-flex is-full-height has-padding-right-extra-large-desktop",
+							"a": {
+							  "@data-mscc-ic": "false",
+							  "@class": "locale-selector-link button button-clear flex-shrink-0",
+							  "@href": "#",
+							  "@data-bi-name": "select-locale",
+							  "span": [
+								{
+								  "@class": "icon",
+								  "@aria-hidden": "true",
+								  "span": {
+									"@class": "docon docon-world"
+								  }
+								},
+								{
+								  "@class": "local-selector-link-text"
+								}
+							  ]
+							},
+							"div": {
+							  "@class": "margin-inline-xs flex-shrink-0",
+							  "div": {
+								"@class": "dropdown has-caret-up",
+								"button": {
+								  "@class": "dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger",
+								  "@aria-controls": "theme-menu-interactive",
+								  "@aria-expanded": "false",
+								  "@title": "Theme",
+								  "@data-bi-name": "theme",
+								  "span": [
+									{
+									  "@class": "icon",
+									  "span": {
+										"@class": "docon docon-sun",
+										"@aria-hidden": "true"
+									  }
+									},
+									"Theme"
+								  ]
+								},
+								"div": {
+								  "@class": "dropdown-menu",
+								  "@id": "theme-menu-interactive",
+								  "@role": "menu",
+								  "ul": {
+									"@class": "theme-selector has-padding-small",
+									"li": [
+									  {
+										"@class": "theme display-block",
+										"button": {
+										  "@class": "button button-clear button-sm theme-control button-block justify-content-flex-start",
+										  "@data-theme-to": "light",
+										  "span": [
+											{
+											  "@class": "theme-light margin-right-xxs",
+											  "span": {
+												"@class": "theme-selector-icon css-variable-support border display-inline-block has-body-background",
+												"@aria-hidden": "true",
+												"svg": {
+												  "@class": "svg",
+												  "@xmlns": "http://www.w3.org/2000/svg",
+												  "@viewbox": "0 0 22 14",
+												  "rect": [
+													{
+													  "@width": "22",
+													  "@height": "14",
+													  "@class": "has-fill-body-background"
+													},
+													{
+													  "@x": "5",
+													  "@y": "5",
+													  "@width": "12",
+													  "@height": "4",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "5",
+													  "@y": "2",
+													  "@width": "2",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "8",
+													  "@y": "2",
+													  "@width": "2",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "11",
+													  "@y": "2",
+													  "@width": "3",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "1",
+													  "@y": "1",
+													  "@width": "2",
+													  "@height": "2",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "5",
+													  "@y": "10",
+													  "@width": "7",
+													  "@height": "2",
+													  "@rx": "0.3",
+													  "@class": "has-fill-primary"
+													},
+													{
+													  "@x": "19",
+													  "@y": "1",
+													  "@width": "2",
+													  "@height": "2",
+													  "@rx": "1",
+													  "@class": "has-fill-secondary"
+													}
+												  ]
+												}
+											  }
+											},
+											{
+											  "@role": "menuitem",
+											  "#text": "Light"
+											}
+										  ]
+										}
+									  },
+									  {
+										"@class": "theme display-block",
+										"button": {
+										  "@class": "button button-clear button-sm theme-control button-block justify-content-flex-start",
+										  "@data-theme-to": "dark",
+										  "span": [
+											{
+											  "@class": "theme-dark margin-right-xxs",
+											  "span": {
+												"@class": "border theme-selector-icon css-variable-support display-inline-block has-body-background",
+												"@aria-hidden": "true",
+												"svg": {
+												  "@class": "svg",
+												  "@xmlns": "http://www.w3.org/2000/svg",
+												  "@viewbox": "0 0 22 14",
+												  "rect": [
+													{
+													  "@width": "22",
+													  "@height": "14",
+													  "@class": "has-fill-body-background"
+													},
+													{
+													  "@x": "5",
+													  "@y": "5",
+													  "@width": "12",
+													  "@height": "4",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "5",
+													  "@y": "2",
+													  "@width": "2",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "8",
+													  "@y": "2",
+													  "@width": "2",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "11",
+													  "@y": "2",
+													  "@width": "3",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "1",
+													  "@y": "1",
+													  "@width": "2",
+													  "@height": "2",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "5",
+													  "@y": "10",
+													  "@width": "7",
+													  "@height": "2",
+													  "@rx": "0.3",
+													  "@class": "has-fill-primary"
+													},
+													{
+													  "@x": "19",
+													  "@y": "1",
+													  "@width": "2",
+													  "@height": "2",
+													  "@rx": "1",
+													  "@class": "has-fill-secondary"
+													}
+												  ]
+												}
+											  }
+											},
+											{
+											  "@role": "menuitem",
+											  "#text": "Dark"
+											}
+										  ]
+										}
+									  },
+									  {
+										"@class": "theme display-block",
+										"button": {
+										  "@class": "button button-clear button-sm theme-control button-block justify-content-flex-start",
+										  "@data-theme-to": "high-contrast",
+										  "span": [
+											{
+											  "@class": "theme-high-contrast margin-right-xxs",
+											  "span": {
+												"@class": "border theme-selector-icon css-variable-support display-inline-block has-body-background",
+												"@aria-hidden": "true",
+												"svg": {
+												  "@class": "svg",
+												  "@xmlns": "http://www.w3.org/2000/svg",
+												  "@viewbox": "0 0 22 14",
+												  "rect": [
+													{
+													  "@width": "22",
+													  "@height": "14",
+													  "@class": "has-fill-body-background"
+													},
+													{
+													  "@x": "5",
+													  "@y": "5",
+													  "@width": "12",
+													  "@height": "4",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "5",
+													  "@y": "2",
+													  "@width": "2",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "8",
+													  "@y": "2",
+													  "@width": "2",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "11",
+													  "@y": "2",
+													  "@width": "3",
+													  "@height": "1",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "1",
+													  "@y": "1",
+													  "@width": "2",
+													  "@height": "2",
+													  "@class": "has-fill-secondary"
+													},
+													{
+													  "@x": "5",
+													  "@y": "10",
+													  "@width": "7",
+													  "@height": "2",
+													  "@rx": "0.3",
+													  "@class": "has-fill-primary"
+													},
+													{
+													  "@x": "19",
+													  "@y": "1",
+													  "@width": "2",
+													  "@height": "2",
+													  "@rx": "1",
+													  "@class": "has-fill-secondary"
+													}
+												  ]
+												}
+											  }
+											},
+											{
+											  "@role": "menuitem",
+											  "#text": "High contrast"
+											}
+										  ]
+										}
+									  }
+									]
+								  }
+								}
+							  }
+							}
+						  },
+						  "ul": {
+							"@class": "links",
+							"@data-bi-name": "footerlinks",
+							"li": [
+							  {
+								"@class": "manage-cookies-holder",
+								"@hidden": ""
+							  },
+							  {
+								"a": {
+								  "@data-mscc-ic": "false",
+								  "@href": "https://docs.microsoft.com/en-us/previous-versions/",
+								  "@data-bi-name": "archivelink",
+								  "#text": "Previous Version Docs"
+								}
+							  },
+							  {
+								"a": {
+								  "@data-mscc-ic": "false",
+								  "@href": "https://docs.microsoft.com/en-us/teamblog",
+								  "@data-bi-name": "bloglink",
+								  "#text": "Blog"
+								}
+							  },
+							  {
+								"a": {
+								  "@data-mscc-ic": "false",
+								  "@href": "https://docs.microsoft.com/en-us/contribute",
+								  "@data-bi-name": "contributorGuide",
+								  "#text": "Contribute"
+								}
+							  },
+							  {
+								"a": {
+								  "@data-mscc-ic": "false",
+								  "@href": "https://go.microsoft.com/fwlink/?LinkId=521839",
+								  "@data-bi-name": "privacy",
+								  "#text": "Privacy & Cookies"
+								}
+							  },
+							  {
+								"a": {
+								  "@data-mscc-ic": "false",
+								  "@href": "https://docs.microsoft.com/en-us/legal/termsofuse",
+								  "@data-bi-name": "termsofuse",
+								  "#text": "Terms of Use"
+								}
+							  },
+							  {
+								"a": {
+								  "@data-mscc-ic": "false",
+								  "@href": "https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx",
+								  "@data-bi-name": "trademarks",
+								  "#text": "Trademarks"
+								}
+							  },
+							  "© Microsoft 2022"
+							]
+						  }
+						}
+					  }
+					},
+					{
+					  "@class": "font-size-sm right-container column is-4-desktop display-none display-block-desktop",
+					  "@data-bi-name": "pageactions",
+					  "@role": "complementary",
+					  "@aria-label": "Page Actions",
+					  "div": {
+						"@id": "affixed-right-container",
+						"@class": "doc-outline is-vertically-scrollable",
+						"nav": {
+						  "@id": "side-doc-outline",
+						  "@data-bi-name": "intopic toc",
+						  "@role": "navigation",
+						  "@aria-label": "Article Outline",
+						  "h3": "In this article"
+						}
+					  }
+					}
+				  ]
+				}
+			  },
+			  "aside": {
+				"@id": "interactive-container",
+				"@class": "interactive-container is-visible-interactive column has-body-background-dark "
+			  }
+			}
+		  },
+		  {
+			"@id": "action-panel",
+			"@role": "region",
+			"@aria-label": "Action Panel",
+			"@class": "action-panel has-default-focus",
+			"@tabindex": "-1"
+		  }
+		],
+		"#comment": "",
+		"section": {
+		  "@class": "border-top has-default-focus is-hidden-interactive margin-top-sm ",
+		  "footer": {
+			"@id": "footer",
+			"@data-bi-name": "footer",
+			"@class": "footer-layout uhf-container has-padding",
+			"@role": "contentinfo",
+			"div": {
+			  "@class": "display-flex is-full-height has-padding-right-extra-large-desktop",
+			  "a": {
+				"@data-mscc-ic": "false",
+				"@class": "locale-selector-link button button-clear flex-shrink-0",
+				"@href": "#",
+				"@data-bi-name": "select-locale",
+				"span": [
+				  {
+					"@class": "icon",
+					"@aria-hidden": "true",
+					"span": {
+					  "@class": "docon docon-world"
+					}
+				  },
+				  {
+					"@class": "local-selector-link-text"
+				  }
+				]
+			  },
+			  "div": {
+				"@class": "margin-inline-xs flex-shrink-0",
+				"div": {
+				  "@class": "dropdown has-caret-up",
+				  "button": {
+					"@class": "dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger",
+					"@aria-controls": "theme-menu",
+					"@aria-expanded": "false",
+					"@title": "Theme",
+					"@data-bi-name": "theme",
+					"span": [
+					  {
+						"@class": "icon",
+						"span": {
+						  "@class": "docon docon-sun",
+						  "@aria-hidden": "true"
+						}
+					  },
+					  "Theme"
+					]
+				  },
+				  "div": {
+					"@class": "dropdown-menu",
+					"@id": "theme-menu",
+					"@role": "menu",
+					"ul": {
+					  "@class": "theme-selector has-padding-small",
+					  "li": [
+						{
+						  "@class": "theme display-block",
+						  "button": {
+							"@class": "button button-clear button-sm theme-control button-block justify-content-flex-start",
+							"@data-theme-to": "light",
+							"span": [
+							  {
+								"@class": "theme-light margin-right-xxs",
+								"span": {
+								  "@class": "theme-selector-icon css-variable-support border display-inline-block has-body-background",
+								  "@aria-hidden": "true",
+								  "svg": {
+									"@class": "svg",
+									"@xmlns": "http://www.w3.org/2000/svg",
+									"@viewbox": "0 0 22 14",
+									"rect": [
+									  {
+										"@width": "22",
+										"@height": "14",
+										"@class": "has-fill-body-background"
+									  },
+									  {
+										"@x": "5",
+										"@y": "5",
+										"@width": "12",
+										"@height": "4",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "5",
+										"@y": "2",
+										"@width": "2",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "8",
+										"@y": "2",
+										"@width": "2",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "11",
+										"@y": "2",
+										"@width": "3",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "1",
+										"@y": "1",
+										"@width": "2",
+										"@height": "2",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "5",
+										"@y": "10",
+										"@width": "7",
+										"@height": "2",
+										"@rx": "0.3",
+										"@class": "has-fill-primary"
+									  },
+									  {
+										"@x": "19",
+										"@y": "1",
+										"@width": "2",
+										"@height": "2",
+										"@rx": "1",
+										"@class": "has-fill-secondary"
+									  }
+									]
+								  }
+								}
+							  },
+							  {
+								"@role": "menuitem",
+								"#text": "Light"
+							  }
+							]
+						  }
+						},
+						{
+						  "@class": "theme display-block",
+						  "button": {
+							"@class": "button button-clear button-sm theme-control button-block justify-content-flex-start",
+							"@data-theme-to": "dark",
+							"span": [
+							  {
+								"@class": "theme-dark margin-right-xxs",
+								"span": {
+								  "@class": "border theme-selector-icon css-variable-support display-inline-block has-body-background",
+								  "@aria-hidden": "true",
+								  "svg": {
+									"@class": "svg",
+									"@xmlns": "http://www.w3.org/2000/svg",
+									"@viewbox": "0 0 22 14",
+									"rect": [
+									  {
+										"@width": "22",
+										"@height": "14",
+										"@class": "has-fill-body-background"
+									  },
+									  {
+										"@x": "5",
+										"@y": "5",
+										"@width": "12",
+										"@height": "4",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "5",
+										"@y": "2",
+										"@width": "2",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "8",
+										"@y": "2",
+										"@width": "2",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "11",
+										"@y": "2",
+										"@width": "3",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "1",
+										"@y": "1",
+										"@width": "2",
+										"@height": "2",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "5",
+										"@y": "10",
+										"@width": "7",
+										"@height": "2",
+										"@rx": "0.3",
+										"@class": "has-fill-primary"
+									  },
+									  {
+										"@x": "19",
+										"@y": "1",
+										"@width": "2",
+										"@height": "2",
+										"@rx": "1",
+										"@class": "has-fill-secondary"
+									  }
+									]
+								  }
+								}
+							  },
+							  {
+								"@role": "menuitem",
+								"#text": "Dark"
+							  }
+							]
+						  }
+						},
+						{
+						  "@class": "theme display-block",
+						  "button": {
+							"@class": "button button-clear button-sm theme-control button-block justify-content-flex-start",
+							"@data-theme-to": "high-contrast",
+							"span": [
+							  {
+								"@class": "theme-high-contrast margin-right-xxs",
+								"span": {
+								  "@class": "border theme-selector-icon css-variable-support display-inline-block has-body-background",
+								  "@aria-hidden": "true",
+								  "svg": {
+									"@class": "svg",
+									"@xmlns": "http://www.w3.org/2000/svg",
+									"@viewbox": "0 0 22 14",
+									"rect": [
+									  {
+										"@width": "22",
+										"@height": "14",
+										"@class": "has-fill-body-background"
+									  },
+									  {
+										"@x": "5",
+										"@y": "5",
+										"@width": "12",
+										"@height": "4",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "5",
+										"@y": "2",
+										"@width": "2",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "8",
+										"@y": "2",
+										"@width": "2",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "11",
+										"@y": "2",
+										"@width": "3",
+										"@height": "1",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "1",
+										"@y": "1",
+										"@width": "2",
+										"@height": "2",
+										"@class": "has-fill-secondary"
+									  },
+									  {
+										"@x": "5",
+										"@y": "10",
+										"@width": "7",
+										"@height": "2",
+										"@rx": "0.3",
+										"@class": "has-fill-primary"
+									  },
+									  {
+										"@x": "19",
+										"@y": "1",
+										"@width": "2",
+										"@height": "2",
+										"@rx": "1",
+										"@class": "has-fill-secondary"
+									  }
+									]
+								  }
+								}
+							  },
+							  {
+								"@role": "menuitem",
+								"#text": "High contrast"
+							  }
+							]
+						  }
+						}
+					  ]
+					}
+				  }
+				}
+			  }
+			},
+			"ul": {
+			  "@class": "links",
+			  "@data-bi-name": "footerlinks",
+			  "li": [
+				{
+				  "@class": "manage-cookies-holder",
+				  "@hidden": ""
+				},
+				{
+				  "a": {
+					"@data-mscc-ic": "false",
+					"@href": "https://docs.microsoft.com/en-us/previous-versions/",
+					"@data-bi-name": "archivelink",
+					"#text": "Previous Version Docs"
+				  }
+				},
+				{
+				  "a": {
+					"@data-mscc-ic": "false",
+					"@href": "https://docs.microsoft.com/en-us/teamblog",
+					"@data-bi-name": "bloglink",
+					"#text": "Blog"
+				  }
+				},
+				{
+				  "a": {
+					"@data-mscc-ic": "false",
+					"@href": "https://docs.microsoft.com/en-us/contribute",
+					"@data-bi-name": "contributorGuide",
+					"#text": "Contribute"
+				  }
+				},
+				{
+				  "a": {
+					"@data-mscc-ic": "false",
+					"@href": "https://go.microsoft.com/fwlink/?LinkId=521839",
+					"@data-bi-name": "privacy",
+					"#text": "Privacy & Cookies"
+				  }
+				},
+				{
+				  "a": {
+					"@data-mscc-ic": "false",
+					"@href": "https://docs.microsoft.com/en-us/legal/termsofuse",
+					"@data-bi-name": "termsofuse",
+					"#text": "Terms of Use"
+				  }
+				},
+				{
+				  "a": {
+					"@data-mscc-ic": "false",
+					"@href": "https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx",
+					"@data-bi-name": "trademarks",
+					"#text": "Trademarks"
+				  }
+				},
+				"© Microsoft 2022"
+			  ]
+			}
+		  }
+		},
+		"script": {
+		  "@src": "/static/third-party/MathJax/2.7.2/MathJax.js?config=TeX-AMS_CHTML",
+		  "@integrity": "sha384-RLsAi7wiVvnmHrRjlVvUjU45C0bfsIBg6Gsxue6azjJi+lA5q5uK+XbGzO3yn5g1",
+		  "@crossorigin": "anonymous"
+		}
+	  }
 	}
-}
+  }

@@ -27,7 +27,6 @@ namespace AssignmentCSJSON.JSONdecode
         public StringBuilder HtmlStringBuilder {get; private set;}
 
         public void Main(){
-
             HtmlStringBuilder = new StringBuilder();
             htmlMainTags = new HtmlBase();
 
@@ -37,9 +36,8 @@ namespace AssignmentCSJSON.JSONdecode
 
             htmlMainTags.Doctype = fullJsonNode["doctype"];
             htmlMainTags.Language = fullJsonNode["language"];
-           
+            
             HtmlBaseWrite();
-            Console.Write($"Stringbuilder write \n{HtmlStringBuilder}");
         }
 
         // Write the doctype and html tag seperately since they have different 
@@ -47,6 +45,7 @@ namespace AssignmentCSJSON.JSONdecode
         // Before the html closing tag it's time to handle the rest of the html
         private void HtmlBaseWrite()
         {
+
             if(htmlMainTags.Doctype != null)
             {
                 WriteOpeningTag("!doctype ");
